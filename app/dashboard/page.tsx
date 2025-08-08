@@ -24,6 +24,7 @@ import {
   User,
 } from "lucide-react"
 import Link from "next/link"
+import { VersionDisplay } from "@/components/VersionDisplay"
 
 export default function Dashboard() {
   const [searchQuery, setSearchQuery] = useState("")
@@ -143,9 +144,11 @@ export default function Dashboard() {
               <Button variant="ghost" size="sm">
                 <Bell className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="sm">
-                <Settings className="h-5 w-5" />
-              </Button>
+              <Link href="/settings">
+                <Button variant="ghost" size="sm">
+                  <Settings className="h-5 w-5" />
+                </Button>
+              </Link>
               <Button variant="ghost" size="sm">
                 <User className="h-5 w-5" />
               </Button>
@@ -296,6 +299,13 @@ export default function Dashboard() {
           </Tabs>
         </div>
       </div>
+      
+      {/* Footer with Version Info */}
+      <footer className="mt-8 py-4 border-t bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <VersionDisplay variant="minimal" className="text-center" />
+        </div>
+      </footer>
     </div>
   )
 }

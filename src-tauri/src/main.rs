@@ -3,13 +3,11 @@
     windows_subsystem = "windows"
 )]
 
-use tauri::{CustomMenuItem, Menu, MenuItem, Submenu, SystemTray, SystemTrayMenu, SystemTrayEvent};
-use tauri::Manager;
+use tauri::{CustomMenuItem, Menu, MenuItem, Submenu};
 
 #[tauri::command]
 fn save_document(content: String, filename: String) -> Result<String, String> {
     use std::fs;
-    use std::path::Path;
     
     let documents_dir = dirs::document_dir()
         .ok_or("Could not find documents directory")?;
@@ -37,18 +35,6 @@ fn get_system_info() -> serde_json::Value {
 }
 
 fn main() {
-    let quit = CustomMenuItem::new("quit".to_string(), "Quit");
-    let hide = CustomMenuItem::new("hide".to_string(), "Hide");
-    let show = CustomMenuItem::new("show".to_string(), "Show");
-    
-    let tray_menu = SystemTrayMenu::new()
-        .add_item(show)
-        .add_item(hide)
-        .add_native_item(tauri::SystemTrayMenuItem::Separator)
-        .add_item(quit);
-    
-    let system_tray = SystemTray::new().with_menu(tray_menu);
-    
     let menu = Menu::new()
         .add_submenu(Submenu::new("File", Menu::new()
             .add_item(CustomMenuItem::new("new_document", "New Document"))
@@ -66,35 +52,6 @@ fn main() {
 
     tauri::Builder::default()
         .menu(menu)
-        .system_tray(system_tray)
-        .on_system_tray_event(|app, event| match event {
-            SystemTrayEvent::LeftClick {
-                position: _,
-                size: _,
-                ..
-            } => {
-                let window = app.get_window("main").unwrap();
-                window.show().unwrap();
-                window.set_focus().unwrap();
-            }
-            SystemTrayEvent::MenuItemClick { id, .. } => {
-                match id.as_str() {
-                    "quit" => {
-                        std::process::exit(0);
-                    }
-                    "hide" => {
-                        let window = app.get_window("main").unwrap();
-                        window.hide().unwrap();
-                    }
-                    "show" => {
-                        let window = app.get_window("main").unwrap();
-                        window.show().unwrap();
-                    }
-                    _ => {}
-                }
-            }
-            _ => {}
-        })
         .invoke_handler(tauri::generate_handler![save_document, get_system_info])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

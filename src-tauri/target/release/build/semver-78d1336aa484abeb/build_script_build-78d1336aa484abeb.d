@@ -1,0 +1,5 @@
+/Volumes/Projections/Apps/Legal-AI-App/src-tauri/target/release/build/semver-78d1336aa484abeb/build_script_build-78d1336aa484abeb.d: /Users/ehauga/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/semver-1.0.26/build.rs
+
+/Volumes/Projections/Apps/Legal-AI-App/src-tauri/target/release/build/semver-78d1336aa484abeb/build_script_build-78d1336aa484abeb: /Users/ehauga/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/semver-1.0.26/build.rs
+
+/Users/ehauga/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/semver-1.0.26/build.rs:

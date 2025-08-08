@@ -1,14 +1,14 @@
 {
   "build": {
-    "beforeDevCommand": "npm run dev",
-    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "pnpm dev",
+    "beforeBuildCommand": "pnpm build",
     "devPath": "http://localhost:3000",
     "distDir": "../out",
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "LegalAI Assistant",
-    "version": "1.0.0"
+    "productName": "DocForge",
+    "version": "1.1.1"
   },
   "tauri": {
     "allowlist": {
@@ -59,7 +59,7 @@
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "com.legalai.assistant",
+      "identifier": "com.legalai.docforge",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
@@ -69,7 +69,7 @@
       ],
       "resources": [],
       "externalBin": [],
-      "copyright": "© 2024 LegalAI Assistant",
+      "copyright": "© 2024 DocForge",
       "category": "Productivity",
       "shortDescription": "AI-powered legal document assistant",
       "longDescription": "Generate legal documents, research case law, and conduct due diligence with AI assistance.",
@@ -79,7 +79,7 @@
         "exceptionDomain": "",
         "signingIdentity": null,
         "providerShortName": null,
-        "entitlements": null
+        "entitlements": "entitlements.plist"
       },
       "windows": {
         "certificateThumbprint": null,
@@ -94,7 +94,7 @@
       {
         "fullscreen": false,
         "resizable": true,
-        "title": "LegalAI Assistant",
+        "title": "DocForge",
         "width": 1200,
         "height": 800,
         "minWidth": 800,
