@@ -1,8 +1,0 @@
-{
-  "/_not-found/page": "app/_not-found/page.js",
-  "/dashboard/page": "app/dashboard/page.js",
-  "/due-diligence/page": "app/due-diligence/page.js",
-  "/generate/page": "app/generate/page.js",
-  "/page": "app/page.js",
-  "/settings/page": "app/settings/page.js"
-}

@@ -1,1 +1,0 @@
-{"rustc":17575471286409424799,"features":"","declared_features":"","target":0,"profile":0,"path":0,"deps":[[3303894197695855415,"build_script_build",false,2812938082868672000]],"local":[{"RerunIfChanged":{"output":"debug/build/cssparser-036d67f5b1645f40/output","paths":["src/tokenizer.rs"]}}],"rustflags":[],"config":0,"compile_kind":0}

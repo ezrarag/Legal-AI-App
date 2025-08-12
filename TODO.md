@@ -16,6 +16,7 @@ DocForge is an AI-powered legal document assistant built with Next.js, Tauri, an
 - [x] Custom title bar with "DocForge" branding and gear icon
 - [x] Dark theme throughout the application
 - [x] Cursor-style landing page for legal workflows
+- [x] **EXACT Cursor layout match with 3D cube logo and three action buttons**
 - [x] Dashboard with jurisdiction selector and user controls
 - [x] Settings page with comprehensive configuration options
 - [x] Document generation interface
@@ -48,6 +49,14 @@ DocForge is an AI-powered legal document assistant built with Next.js, Tauri, an
 - [ ] Add citation formatting and validation
 
 ## 📋 TODO - High Priority
+
+### 🎨 Interface Layout & Design (START HERE)
+- [ ] **Complete the interface layout foundation before adding functionality**
+- [ ] Ensure all pages follow the Cursor-style design system
+- [ ] Implement consistent dark theme across all components
+- [ ] Add proper spacing and typography hierarchy
+- [ ] Create responsive layouts for all screen sizes
+- [ ] Implement proper navigation flow between pages
 
 ### Core Functionality
 - [ ] Implement actual document generation with AI
