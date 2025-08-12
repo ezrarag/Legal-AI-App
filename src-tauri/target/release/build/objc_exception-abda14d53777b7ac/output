@@ -1,4 +1,4 @@
-OUT_DIR = Some(/Volumes/Projections/Apps/Legal-AI-App/src-tauri/target/release/build/objc_exception-abda14d53777b7ac/out)
+OUT_DIR = Some(/Users/ehauga/Desktop/Legal-AI-App/src-tauri/target/release/build/objc_exception-abda14d53777b7ac/out)
 OPT_LEVEL = Some(3)
 TARGET = Some(aarch64-apple-darwin)
 HOST = Some(aarch64-apple-darwin)
@@ -43,4 +43,4 @@ ARFLAGS_aarch64_apple_darwin = None
 cargo:rerun-if-env-changed=ARFLAGS_aarch64-apple-darwin
 ARFLAGS_aarch64-apple-darwin = None
 cargo:rustc-link-lib=static=exception
-cargo:rustc-link-search=native=/Volumes/Projections/Apps/Legal-AI-App/src-tauri/target/release/build/objc_exception-abda14d53777b7ac/out
+cargo:rustc-link-search=native=/Users/ehauga/Desktop/Legal-AI-App/src-tauri/target/release/build/objc_exception-abda14d53777b7ac/out

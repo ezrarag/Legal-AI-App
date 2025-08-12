@@ -1,6 +1,6 @@
 {
-  "appId": "com.legalai.assistant",
-  "appName": "LegalAI Assistant",
+  "appId": "com.legalai.docforge",
+  "appName": "DocForge",
   "webDir": "out",
   "bundledWebRuntime": false,
   "server": {
@@ -32,7 +32,7 @@
     }
   },
   "ios": {
-    "scheme": "LegalAI Assistant",
+    "scheme": "DocForge",
     "contentInset": "automatic"
   },
   "android": {

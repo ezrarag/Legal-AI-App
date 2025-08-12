@@ -1,4 +1,4 @@
-// File: /Volumes/Projections/Apps/Legal-AI-App/app/layout.tsx
+// File: /Users/ehauga/Desktop/Legal-AI-App/app/layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

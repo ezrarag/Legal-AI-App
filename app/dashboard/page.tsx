@@ -115,54 +115,44 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white border-b sticky top-0 z-50">
-        <div className="px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <Link href="/" className="flex items-center space-x-2">
-                <Gavel className="h-8 w-8 text-blue-600" />
-                <span className="text-2xl font-bold text-gray-900">LegalAI</span>
-              </Link>
-              <div className="hidden md:flex items-center space-x-2">
-                <Select value={selectedJurisdiction} onValueChange={setSelectedJurisdiction}>
-                  <SelectTrigger className="w-48">
-                    <SelectValue placeholder="Select Jurisdiction" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="ontario">Ontario, Canada</SelectItem>
-                    <SelectItem value="florida">Florida, USA</SelectItem>
-                    <SelectItem value="california">California, USA</SelectItem>
-                    <SelectItem value="texas">Texas, USA</SelectItem>
-                    <SelectItem value="newyork">New York, USA</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+    <div className="min-h-screen bg-gray-900">
+      <div className="px-6 py-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Top Controls */}
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center space-x-2">
+              <Select value={selectedJurisdiction} onValueChange={setSelectedJurisdiction}>
+                <SelectTrigger className="w-48 bg-gray-800 border-gray-600 text-white">
+                  <SelectValue placeholder="Select Jurisdiction" />
+                </SelectTrigger>
+                <SelectContent className="bg-gray-800 border-gray-600">
+                  <SelectItem value="ontario">Ontario, Canada</SelectItem>
+                  <SelectItem value="florida">Florida, USA</SelectItem>
+                  <SelectItem value="california">California, USA</SelectItem>
+                  <SelectItem value="texas">Texas, USA</SelectItem>
+                  <SelectItem value="newyork">New York, USA</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
             <div className="flex items-center space-x-4">
-              <Button variant="ghost" size="sm">
+              <Button variant="ghost" size="sm" className="text-gray-300 hover:text-white hover:bg-gray-800">
                 <Bell className="h-5 w-5" />
               </Button>
               <Link href="/settings">
-                <Button variant="ghost" size="sm">
+                <Button variant="ghost" size="sm" className="text-gray-300 hover:text-white hover:bg-gray-800">
                   <Settings className="h-5 w-5" />
                 </Button>
               </Link>
-              <Button variant="ghost" size="sm">
+              <Button variant="ghost" size="sm" className="text-gray-300 hover:text-white hover:bg-gray-800">
                 <User className="h-5 w-5" />
               </Button>
             </div>
           </div>
-        </div>
-      </header>
 
-      <div className="px-6 py-8">
-        <div className="max-w-7xl mx-auto">
           {/* Welcome Section */}
           <div className="mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome back, Counselor</h1>
-            <p className="text-gray-600">
+            <h1 className="text-3xl font-bold text-white mb-2">Welcome back, Counselor</h1>
+            <p className="text-gray-400">
               Generate legal documents, research case law, and manage your practice with AI.
             </p>
           </div>
@@ -171,15 +161,15 @@ export default function Dashboard() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {quickActions.map((action, index) => (
               <Link key={index} href={action.href}>
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
+                <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full bg-gray-800 border-gray-700 hover:border-gray-600">
                   <CardHeader className="pb-3">
                     <div className={`w-12 h-12 rounded-lg ${action.color} flex items-center justify-center mb-3`}>
                       {action.icon}
                     </div>
-                    <CardTitle className="text-lg">{action.title}</CardTitle>
+                    <CardTitle className="text-lg text-white">{action.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription>{action.description}</CardDescription>
+                    <CardDescription className="text-gray-400">{action.description}</CardDescription>
                   </CardContent>
                 </Card>
               </Link>

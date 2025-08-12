@@ -1,4 +1,4 @@
-// File: /Volumes/Projections/Apps/Legal-AI-App/app/generate/page.tsx
+// File: /Users/ehauga/Desktop/Legal-AI-App/app/generate/page.tsx
 import * as entry from '../../../../app/generate/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
